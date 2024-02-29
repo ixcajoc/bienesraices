@@ -1,0 +1,50 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+//modernizer agrega la clase .webp y no-webp
+.no-webp .inicio{
+    background-image: url(../img/header.jpg);
+}
+.webp .inicio{
+    background-image: url(../img/header.jpg);
+}
+.header{
+    background-color: v.$grisOscuro;
+    padding: 1rem 0 3rem 0;
+
+    &.inicio{
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        @include m.tablet{
+            min-height: 70rem;
+        }
+
+        .contenido-header{
+            @include m.tablet{
+                min-height: 70rem;
+                h1{
+                    text-align: left;
+                    max-width: 60rem;
+                    line-height: 2;
+                }
+
+            }
+        }
+    }
+    //tambien puedo sacar .inicio del selector para que no este dentro de .header, no pasa nada
+}
+
+.contenido-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h1{
+        color: v.$blanco;
+        // font-weight: v.$regular;
+        font-weight: v.$bold;
+
+    }
+    
+    
+}

@@ -1,0 +1,45 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.formulario{
+    p{
+        color: v.$grisOscuro;
+        margin-top: 2rem;
+        font-size: 1.4rem;
+    }
+    legend{
+        font-size: 2rem;
+        color: v.$grisOscuro;
+    }
+    label{
+        font-weight: v.$bold;
+        text-transform: uppercase;
+        display: block;
+    }
+    //a todos los input, excepto el submit
+    input:not([type="submit"]),
+    textarea,
+    select {
+        padding: 1rem;
+        display: block;
+        width: 100%;
+        background-color: v.$blanco;
+        border: solid 1px v.$gris;
+        border-radius: 1rem;
+        margin-bottom: 2rem;
+    }
+    textarea{
+        height: 20rem;
+    }
+    .forma-contacto{
+        max-width: 30rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    input[type="radio"]{
+        margin: 0;
+        width: auto;
+    }
+}
