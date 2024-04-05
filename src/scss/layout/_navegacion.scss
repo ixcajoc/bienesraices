@@ -15,7 +15,11 @@
         margin-top: 3rem;
         margin-bottom: 3rem;
         filter: invert(100%);//invierte el color de origen, filtro
+        transition: filter .2s ease;
 
+        &:hover{
+            filter: invert(0%);
+        }
         @include m.tablet {
             margin-top: 0;
         }
